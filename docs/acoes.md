@@ -1,6 +1,8 @@
-Hub de filmes
+# Hub de filmes
 
-Planejamentos de ações do usuário:
+## Ações
+
+### Planejamentos de ações do usuário:
 
 - se cadastrar
 
@@ -12,7 +14,7 @@ Planejamentos de ações do usuário:
 - Adicionar categoria em favoritos
 - Remover categoria de favoritos
 
-Planejamento de ações do Admin:
+### Planejamento de ações do Admin:
 
 - Adicionar novos filmes
 - Editar informações de filmes

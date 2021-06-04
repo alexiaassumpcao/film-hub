@@ -1,8 +1,8 @@
-Hub de filmes
+# Hub de filmes
 
-Planejamento de entidades:
+## Planejamento de entidades:
 
-- filme
+### filme
 _id: uui
 nome: string
 categoria: [string]
@@ -20,7 +20,8 @@ constinuações: [string]
 	running_time: 122,
 	continuation: ["A Escolha perfeita 2", "A Escolha perfeita 3"]
 }
-- usuário: 
+
+### usuário: 
 _id: uui
 nome: string
 questão de acesso: string
@@ -39,7 +40,7 @@ categoria favorita: [string]
 	}
 }
 
--categoria
+### categoria
 _id: uui
 nome: string
 caracteristicas: string
