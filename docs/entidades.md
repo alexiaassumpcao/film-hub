@@ -21,7 +21,7 @@ constinuações: [string]
 	continuation: ["A Escolha perfeita 2", "A Escolha perfeita 3"]
 }
 
-### Query executada no pgAdmin 4
+#### Query executada no pgAdmin 4
 CREATE TABLE film (
 	id SERIAL PRIMARY KEY NOT NULL,
 	release_date DATE NOT NULL,
@@ -56,6 +56,33 @@ categoria favorita: [string]
 		category: ["musical", "terror"]
 	}
 }
+#### Query executada no pgAdmin 4
+##### v2
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY NOT NULL,
+	name VARCHAR(100) NOT NULL,
+	access_question VARCHAR(200) NOT NULL,
+	access_answer VARCHAR(100) NOT NULL,
+	favorite_film VARCHAR(100) REFERENCES film (name)
+)
+SELECT * FROM users;
+
+
+INSERT INTO users (name, access_question, access_answer, favorite_film) VALUES 
+('Robson', 'Quantos cachorros moram comigo?', '2', 'A Escolha Perfeita');
+##### v1
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY NOT NULL,
+	name VARCHAR(100) NOT NULL,
+	access_question VARCHAR(200) NOT NULL,
+	access_answer VARCHAR(100) NOT NULL,
+	favorite_films text[]
+)
+SELECT * FROM users;
+
+
+INSERT INTO users (name, access_question, access_answer, favorite_films) VALUES 
+('Robson', 'Quantos cachorros moram comigo?', '2', '{"A Escolha Perfeita", "A Escolha Perfeita 2"}');
 
 ### categoria
 _id: uui
