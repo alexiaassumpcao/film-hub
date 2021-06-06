@@ -21,6 +21,23 @@ constinuações: [string]
 	continuation: ["A Escolha perfeita 2", "A Escolha perfeita 3"]
 }
 
+### Query executada no pgAdmin 4
+CREATE TABLE film (
+	id SERIAL PRIMARY KEY NOT NULL,
+	release_date DATE NOT NULL,
+	name VARCHAR(50) UNIQUE NOT NULL,
+	ranking NUMERIC(4, 2) NOT NULL,
+	running_time NUMERIC(3, 0) NOT NULL
+)
+
+SELECT * FROM film;
+
+INSERT INTO film (release_date, name, ranking, running_time) VALUES 
+('2012-09-24', 'A Escolha Perfeita', 10, 122);
+
+INSERT INTO film (release_date, name, ranking, running_time) VALUES 
+('2015-08-13', 'A Escolha Perfeita 2', 10, 115);
+
 ### usuário: 
 _id: uui
 nome: string
